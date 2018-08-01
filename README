@@ -1,0 +1,4 @@
+./buildconf --force
+./configure --with-pdo_zim
+make
+./sapi/cli/php -f ext/pdo_zim/pdo_zim.php 
