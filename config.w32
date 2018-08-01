@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("pdo_zim", "for pdo_zim support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("pdo_zim", "enable pdo_zim support", "no");
+
+if (PHP_PDO_ZIM != "no") {
+	EXTENSION("pdo_zim", "pdo_zim.c", PHP_EXTNAME_SHARED, "/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1");
+}
+
