@@ -10,8 +10,9 @@ dnl Make sure that the comment is aligned:
 if test "$PHP_PDO_ZIM" != "no"; then
 
   PHP_ADD_LIBRARY_WITH_PATH(ssh, /usr/lib)
+  PHP_ADD_LIBRARY_WITH_PATH(pcre, /usr/lib)
 
-   PHP_SUBST(PDO_ZIM_SHARED_LIBADD)
+  PHP_SUBST(PDO_ZIM_SHARED_LIBADD)
 
   PHP_NEW_EXTENSION(pdo_zim,pdo_zim.c zim_driver.c zim_statement.c, $ext_shared,, -DZEND_ENABLE_STATIC_TSRMLS_CACHE=1)
 fi
